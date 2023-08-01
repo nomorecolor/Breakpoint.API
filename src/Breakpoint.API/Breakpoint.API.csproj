@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Breakpoint.Domain\Breakpoint.Domain.csproj" />
+	  <ProjectReference Include="..\Breakpoint.Business\Breakpoint.Business.csproj" />
+	  <ProjectReference Include="..\Breakpoint.Domain\Breakpoint.Domain.csproj" />
   </ItemGroup>
 
 </Project>
