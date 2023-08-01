@@ -7,5 +7,7 @@ namespace Breakpoint.Domain.Models
 		public BreakpointContext(DbContextOptions<BreakpointContext> options) : base(options)
 		{
 		}
+
+		public DbSet<Laptop> Laptops { get; set; }
 	}
 }

@@ -1,16 +1,20 @@
+using Breakpoint.Business.Services;
 using Breakpoint.Domain.Models;
+using Breakpoint.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<BreakpointContext>(opt => opt.UseInMemoryDatabase(databaseName: "Breakpoint"));
+builder.Services.AddTransient<ILaptopService, LaptopService>();
+builder.Services.AddTransient<ILaptopRepository, LaptopRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
