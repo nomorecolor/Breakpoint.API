@@ -65,7 +65,7 @@ namespace Breakpoint.API.Controllers
 			return CreatedAtAction(nameof(GetById), new { id = laptopDto.Id });
 		}
 
-		[HttpPut]
+		[HttpPut("{id}")]
 		[ProducesResponseType(typeof(void), StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -90,7 +90,7 @@ namespace Breakpoint.API.Controllers
 			return Ok();
 		}
 
-		[HttpDelete]
+		[HttpDelete("{id}")]
 		[ProducesResponseType(typeof(void), StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
