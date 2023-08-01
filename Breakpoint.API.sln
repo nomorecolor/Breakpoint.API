@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breakpoint.API", "src\Break
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{14B870EF-90C6-4E49-9F35-4DA15F41C664}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breakpoint.Domain", "src\Breakpoint.Domain\Breakpoint.Domain.csproj", "{966C8AE2-4BDD-4844-9A40-AE3621E661F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{AB49422D-AF7A-4FA2-BEF9-916E1F020C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB49422D-AF7A-4FA2-BEF9-916E1F020C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB49422D-AF7A-4FA2-BEF9-916E1F020C73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966C8AE2-4BDD-4844-9A40-AE3621E661F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966C8AE2-4BDD-4844-9A40-AE3621E661F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966C8AE2-4BDD-4844-9A40-AE3621E661F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966C8AE2-4BDD-4844-9A40-AE3621E661F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AB49422D-AF7A-4FA2-BEF9-916E1F020C73} = {14B870EF-90C6-4E49-9F35-4DA15F41C664}
+		{E7985AB9-6ED1-4863-8C09-B0B3EC45E2D6} = {14B870EF-90C6-4E49-9F35-4DA15F41C664}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C860F9C-6DD8-4B6F-A83E-9FDF15A88669}
