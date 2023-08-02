@@ -6,11 +6,11 @@ namespace Breakpoint.Business.Services
 {
 	public interface ILaptopService
 	{
-		public Task<IEnumerable<LaptopDto>> GetAll();
-		public Task<LaptopDto?> GetById(int id);
-		public Task Add(LaptopDto laptopDto);
-		public Task Update(int id, LaptopDto laptop);
-		public Task Delete(int id);
+		Task<IEnumerable<LaptopDto>> GetAll();
+		Task<LaptopDto?> GetById(int id);
+		Task Add(LaptopDto laptopDto);
+		Task Update(int id, LaptopDto laptop);
+		Task Delete(int id);
 	}
 
 	public class LaptopService : ILaptopService

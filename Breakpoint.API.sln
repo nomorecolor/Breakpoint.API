@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Breakpoint.Business", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Breakpoint.Contracts", "src\Breakpoint.Contracts\Breakpoint.Contracts.csproj", "{AD35352E-74F3-4811-B7EB-314114AF537B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breakpoint.Infrastructure", "src\Breakpoint.Infrastructure\Breakpoint.Infrastructure.csproj", "{9BD52A2F-9E74-454F-B7DA-657AA060B4BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{AD35352E-74F3-4811-B7EB-314114AF537B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD35352E-74F3-4811-B7EB-314114AF537B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD35352E-74F3-4811-B7EB-314114AF537B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BD52A2F-9E74-454F-B7DA-657AA060B4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD52A2F-9E74-454F-B7DA-657AA060B4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD52A2F-9E74-454F-B7DA-657AA060B4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD52A2F-9E74-454F-B7DA-657AA060B4BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{966C8AE2-4BDD-4844-9A40-AE3621E661F3} = {14B870EF-90C6-4E49-9F35-4DA15F41C664}
 		{E7985AB9-6ED1-4863-8C09-B0B3EC45E2D6} = {14B870EF-90C6-4E49-9F35-4DA15F41C664}
 		{AD35352E-74F3-4811-B7EB-314114AF537B} = {14B870EF-90C6-4E49-9F35-4DA15F41C664}
+		{9BD52A2F-9E74-454F-B7DA-657AA060B4BD} = {14B870EF-90C6-4E49-9F35-4DA15F41C664}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C860F9C-6DD8-4B6F-A83E-9FDF15A88669}

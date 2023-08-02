@@ -1,9 +1,11 @@
 ﻿using Breakpoint.Business.Services;
 using Breakpoint.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Breakpoint.API.Controllers
 {
+	[Authorize]
 	[Route("api/[controller]")]
 	[ApiController]
 	public class UserController : ControllerBase
@@ -62,7 +64,7 @@ namespace Breakpoint.API.Controllers
 
 			await _userService.Add(userDto);
 
-			return CreatedAtAction(nameof(GetById), new { id = userDto.Id });
+			return CreatedAtAction(nameof(GetById), new { id = userDto.Id }, userDto);
 		}
 
 		[HttpPut("{id}")]

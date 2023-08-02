@@ -6,11 +6,11 @@ namespace Breakpoint.Business.Services
 {
 	public interface IUserService
 	{
-		public Task<IEnumerable<UserDto>> GetAll();
-		public Task<UserDto?> GetById(int id);
-		public Task Add(UserDto userDto);
-		public Task Update(int id, UserDto userDto);
-		public Task Delete(int id);
+		Task<IEnumerable<UserDto>> GetAll();
+		Task<UserDto?> GetById(int id);
+		Task Add(UserDto userDto);
+		Task Update(int id, UserDto userDto);
+		Task Delete(int id);
 	}
 
 	public class UserService : IUserService

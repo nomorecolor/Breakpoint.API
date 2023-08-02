@@ -5,11 +5,11 @@ namespace Breakpoint.Domain.Repositories
 {
 	public interface ILaptopRepository
 	{
-		public Task<IEnumerable<Laptop>> GetAll();
-		public Task<Laptop?> GetById(int id);
-		public Task Add(Laptop laptop);
-		public Task Update(int id, Laptop laptop);
-		public Task Delete(int id);
+		Task<IEnumerable<Laptop>> GetAll();
+		Task<Laptop?> GetById(int id);
+		Task Add(Laptop laptop);
+		Task Update(int id, Laptop laptop);
+		Task Delete(int id);
 	}
 
 	public class LaptopRepository : ILaptopRepository
@@ -19,8 +19,6 @@ namespace Breakpoint.Domain.Repositories
 		public LaptopRepository(BreakpointContext context)
 		{
 			_context = context;
-
-			InitializeData();
 		}
 
 		public async Task<IEnumerable<Laptop>> GetAll()
@@ -63,26 +61,6 @@ namespace Breakpoint.Domain.Repositories
 			}
 
 			await _context.SaveChangesAsync();
-		}
-
-		private void InitializeData()
-		{
-			if (!_context.Laptops.Any())
-			{
-				var laptops = new List<Laptop> {
-					new Laptop {
-						Id = 1,
-						Name = "Laptop 1"
-					},
-					new Laptop {
-						Id = 2,
-						Name = "Laptop 2"
-					}
-			};
-
-				_context.Laptops.AddRange(laptops);
-				_context.SaveChanges();
-			}
 		}
 	}
 }

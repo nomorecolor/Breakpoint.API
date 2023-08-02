@@ -5,11 +5,11 @@ namespace Breakpoint.Domain.Repositories
 {
 	public interface IUserRepository
 	{
-		public Task<IEnumerable<User>> GetAll();
-		public Task<User?> GetById(int id);
-		public Task Add(User user);
-		public Task Update(int id, User user);
-		public Task Delete(int id);
+		Task<IEnumerable<User>> GetAll();
+		Task<User?> GetById(int id);
+		Task Add(User user);
+		Task Update(int id, User user);
+		Task Delete(int id);
 	}
 
 	public class UserRepository : IUserRepository
@@ -19,8 +19,6 @@ namespace Breakpoint.Domain.Repositories
 		public UserRepository(BreakpointContext context)
 		{
 			_context = context;
-
-			InitializeData();
 		}
 
 		public async Task<IEnumerable<User>> GetAll()
@@ -64,32 +62,6 @@ namespace Breakpoint.Domain.Repositories
 			}
 
 			await _context.SaveChangesAsync();
-		}
-
-		private void InitializeData()
-		{
-			if (!_context.Users.Any())
-			{
-				var users = new List<User> {
-					new User {
-						Id = 1,
-						FirstName = "Admin",
-						LastName = "Admin",
-						Username = "admin",
-						Password = "admin"
-					},
-					new User {
-						Id = 2,
-						FirstName = "First Name",
-						LastName = "Last Name",
-						Username = "first",
-						Password = "first"
-					}
-				};
-
-				_context.Users.AddRange(users);
-				_context.SaveChanges();
-			}
 		}
 	}
 }

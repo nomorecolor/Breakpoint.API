@@ -11,6 +11,8 @@ namespace Breakpoint.Domain
 		{
 			services.AddDbContext<BreakpointContext>(opt => opt.UseInMemoryDatabase(databaseName: "Breakpoint"));
 
+			services.AddTransient<IAuthRepository, AuthRepository>();
+
 			services.AddTransient<ILaptopRepository, LaptopRepository>();
 			services.AddTransient<IUserRepository, UserRepository>();
 
