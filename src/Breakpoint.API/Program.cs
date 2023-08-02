@@ -1,7 +1,5 @@
-using Breakpoint.Business.Services;
-using Breakpoint.Domain.Models;
-using Breakpoint.Domain.Repositories;
-using Microsoft.EntityFrameworkCore;
+using Breakpoint.Business;
+using Breakpoint.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,9 +9,8 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<BreakpointContext>(opt => opt.UseInMemoryDatabase(databaseName: "Breakpoint"));
-builder.Services.AddTransient<ILaptopService, LaptopService>();
-builder.Services.AddTransient<ILaptopRepository, LaptopRepository>();
+builder.Services.AddDomain();
+builder.Services.AddService();
 
 var app = builder.Build();
 

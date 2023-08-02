@@ -9,5 +9,6 @@ namespace Breakpoint.Domain.Models
 		}
 
 		public DbSet<Laptop> Laptops { get; set; }
+		public DbSet<User> Users { get; set; }
 	}
 }
